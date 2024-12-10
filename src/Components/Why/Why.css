@@ -1,0 +1,70 @@
+/* Adjusted CSS for Why Choose Us Section */
+.why-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start; /* Align content near the top */
+  align-items: center;
+  padding: 25px; /* Adjust padding as needed */
+  text-align: center;
+  width: 80%; /* Maintain the container width */
+  margin: 5px auto 0; /* Reduced top margin to bring it closer to the previous container */
+}
+
+/* Styling for the main title (h4) */
+.why-container h4 {
+  font-size: 32px;
+  color: #333;
+  margin-bottom: 15px; /* Space below the title */
+  font-weight: bold;
+}
+
+/* Grid layout for the content boxes */
+.container-box {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Fixed 3 columns */
+  gap: 15px; /* Space between grid items */
+  width: 100%;
+}
+
+/* Style each box */
+.container-box div {
+  background-color: #fff;
+  padding: 15px;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  min-height: 130px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover effect for the boxes */
+.container-box div:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(26, 24, 24, 0.15);
+}
+
+/* Heading and paragraph styling inside the boxes */
+.container-box span {
+  font-weight: bold;
+  font-size: 18px;
+  color: #007bff; /* Blue color for headings */
+  line-height: normal;
+}
+
+.container-box p {
+  font-size: 14px;
+  color: #666;
+  margin-top: auto; /* Pushes paragraph to the bottom of the box */
+  text-align: center;
+  line-height: normal;
+}
+
+/* Responsive styling for smaller screens */
+@media (max-width: 768px) {
+  .container-box {
+    grid-template-columns: repeat(1, 1fr); /* Stack boxes on smaller screens */
+  }
+}

@@ -1,0 +1,95 @@
+/* Center the main container */
+.utube-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  /* min-height: 100vh; */
+  /* background-color: #f9f9f9; */
+}
+
+/* Heading styling */
+.utube-container h5 {
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+  color: #333;
+  text-align: center;
+  font-weight: bold;
+}
+
+/* Grid layout for thumbnails */
+.all-class {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4 items per row */
+  gap: 20px;
+  width: 100%;
+  max-width: 1200px;
+}
+
+/* Thumbnail container styling */
+.thumbnail {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+     /* height: 200px;  */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 4px 6px rgba(5, 4, 4, 0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.thumbnail:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+}
+
+/* Image styling */
+.thumbnail img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain; /* Ensures the complete image is shown */
+}
+
+/* Icon overlay in the center of the image */
+.icon-overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 30px;
+  background-color: rgba(255, 255, 255, 0.8); /* Slightly transparent white */
+  border: 2px solid red; /* Highlighted red border */
+  color: red;
+  font-size: 2rem;
+  transition: background-color 0.3s, color 0.3s;
+  z-index: 1;
+}
+
+.icon-overlay i {
+  font-size: 2rem;
+}
+
+.thumbnail:hover .icon-overlay {
+  background-color: rgba(255, 0, 0, 0.9); /* Bright red background on hover */
+  color: #fff; /* White icon color on hover */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .all-class {
+    grid-template-columns: repeat(2, 1fr); /* 2 items per row on smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .all-class {
+    grid-template-columns: 1fr; /* 1 item per row on mobile devices */
+  }
+}
+
+  

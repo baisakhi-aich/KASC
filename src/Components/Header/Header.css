@@ -1,0 +1,176 @@
+/* 
+.web-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    background-color: #cbc7c7;
+    color: #131212;
+  }
+  
+  .web-header span {
+    display: flex;
+    align-items: center;
+  }
+  
+  .phone-number, .email-id {
+    color: #201e1e;
+    text-decoration: none;
+    margin-left: 5px;
+    font-size: 16px;
+    font-weight: 500;
+  }
+  
+  .phone-number:hover, .email-id:hover {
+    text-decoration: underline;
+  }
+  
+  .bi {
+    font-size: 18px;
+    color: #2b2828;
+    margin-right: 8px;
+  }
+  
+  /* Mobile Styles */
+  /* @media (max-width: 768px) {
+    .web-header {
+      flex-direction: column;
+      align-items: flex-start;
+      padding: 10px;
+    }
+  
+    .phone-number, .email-id {
+      font-size: 14px;
+    }
+  
+    .bi {
+      font-size: 16px;
+    }
+  }
+  
+  /* Tablet Styles */
+  /* @media (min-width: 769px) and (max-width: 1024px) {
+    .web-header {
+      flex-direction: row;
+      justify-content: space-between;
+    }
+  
+    .phone-number, .email-id {
+      font-size: 15px;
+    }
+  
+    .bi {
+      font-size: 17px;
+    }
+  } */
+  /* Basic styling */
+/* Main container for the header */
+/* Main container for the header */
+/* General styling for header */
+/* General header styling */
+/* General header styling */
+.web-site { 
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px;
+  background-color: #f5f5f5;
+  color: rgb(64, 40, 40);
+  font-family: Arial, sans-serif;
+  border-bottom: 1px solid #ddd;
+  height: auto;
+}
+
+/* Left: Contact Information Styling */
+.web-header-left {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.mobile-no,
+.email-id {
+  margin-right: 20px;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+}
+
+.contact-link {
+  color: rgb(89, 22, 204);
+  text-decoration: underline;
+  margin-left: 5px;
+}
+
+.contact-link:hover {
+  color: rgb(45, 22, 150);
+}
+
+/* Right: Social Media Icons Styling */
+.web-header-right {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.web-header-right a {
+  color: rgb(55, 63, 231);
+  text-decoration: none;
+  font-size: 20px;
+  transition: color 0.3s ease;
+}
+
+.web-header-right a:hover {
+  color: #141415;
+}
+
+/* Responsive Design for tablets and mobile */
+@media (max-width: 768px) {
+  .web-site {
+    flex-direction: column;
+    text-align: center;
+    padding: 20px 15px;
+  }
+
+  .web-header-left,
+  .web-header-right {
+    justify-content: center;
+    margin: 10px 0;
+  }
+
+  .mobile-no,
+  .email-id {
+    font-size: 14px;
+    margin-bottom: 5px;
+  }
+
+  .contact-link {
+    font-size: 14px;
+  }
+
+  .web-header-right {
+    gap: 15px;
+  }
+
+  .web-header-right a {
+    font-size: 18px;
+  }
+}
+
+/* Additional Responsive Styling for small mobile devices (max-width: 480px) */
+@media (max-width: 480px) {
+  .mobile-no,
+  .email-id {
+    font-size: 12px;
+    display: block;
+    margin-bottom: 5px;
+  }
+
+  .contact-link {
+    font-size: 12px;
+  }
+
+  .web-header-right a {
+    font-size: 16px;
+  }
+}

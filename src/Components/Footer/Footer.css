@@ -1,0 +1,72 @@
+/* Footer.css */
+/* Footer main container */
+.footer {
+  background-color: #333; /* Dark background */
+  color: #fff; /* Light text */
+  padding: 20px 15px; /* Consistent padding */
+  display: flex;
+  flex-direction: column; /* Column layout for smaller screens */
+  align-items: center; /* Center-align items */
+  text-align: center;
+  font-family: Arial, sans-serif;
+}
+
+/* Left section: Copyright text */
+.footer-left p {
+  margin: 0;
+  font-size: 14px;
+}
+
+/* Right section: Social Icons */
+.footer-right {
+  margin-top: 15px; /* Space between text and icons on mobile */
+}
+
+.social-icons a {
+  color: #fff; /* Default icon color */
+  margin: 0 10px;
+  text-decoration: none;
+  font-size: 20px; /* Default icon size */
+  display: inline-block;
+  transition: color 0.3s ease, transform 0.2s ease; /* Smooth hover animation */
+}
+
+.fb,
+.tw,
+.in,
+.yt {
+  background-color: #444; /* Icon background */
+  padding: 12px; /* Inner padding for icons */
+  font-size: 18px; /* Icon font size */
+  border-radius: 50%; /* Circular icons */
+  color: #8a9ba8; /* Initial color for icons */
+}
+
+.social-icons a:hover {
+  color: #2e82ad; /* Example hover color */
+  transform: scale(1.1); /* Slightly enlarge icons on hover */
+}
+
+/* Responsive styles */
+@media (min-width: 600px) {
+  .footer {
+    flex-direction: row; /* Row layout for wider screens */
+    justify-content: space-between; /* Space out content */
+    text-align: left;
+  }
+
+  .footer-right {
+    margin-top: 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .footer-left p {
+    font-size: 12px; /* Smaller font size for very small screens */
+  }
+
+  .social-icons a {
+    font-size: 18px; /* Adjust icon size for smaller screens */
+    margin: 0 5px; /* Reduce spacing between icons */
+  }
+}
