@@ -1,82 +1,78 @@
-/* Teams.css */
 .quote-container {
-    max-width: 1200px; /* Set a max width for the container */
-    margin: 0 auto; /* Center the container */
-    padding: 20px; /* Add some padding */
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  text-align: center;
+  border-radius: 8px;
+  /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); */
+}
+
+.quote-container h2 {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 30px;
+  color: #333;
+}
+
+.quote-item {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 20px;
+  margin-bottom: 40px;
+}
+
+.quote-image-wrapper {
+  flex: 0 0 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.quote-image {
+  max-width: 100%;
+  height: auto;
+  border-radius: 50%; /* This makes the image circular */
+  border: 5px solid #ddd;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  object-fit: cover; /* Ensures the image fits well within the circular shape */
+  width: 200px; /* Set a specific width */
+  height: 200px; /* Set a specific height to match the width */
+}
+
+
+.quote-text {
+  flex: 1;
+  text-align: left;
+}
+
+.quote-text blockquote {
+  font-size: 1rem;
+  font-style: italic;
+  color: #555;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+}
+
+.quote-text p {
+  margin-top: 10px;
+  font-size: 1rem;
+  font-weight: bold;
+  color: #333;
+}
+
+@media (max-width: 768px) {
+  .quote-item {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
   }
-  
-  h2 {
-    text-align: center; /* Center the heading */
-    margin-bottom: 40px; /* Space below the heading */
-  }
-  
-  .cantainer1,
-  .container2 {
-    display: flex; /* Use flexbox for layout */
-    align-items: center; /* Center items vertically */
-    margin-bottom: 20px; /* Space between containers */
-  }
-  
+
   .quote-image-wrapper {
-    flex: 1; /* Allow the image wrapper to take up available space */
-    overflow: hidden; /* Prevent overflow during scaling */
-    /* border-radius: 50%; */
+    margin-bottom: 20px;
   }
-  
-  .quote-image {
-     width: 100%; 
-    height: auto; 
-    animation: fadeIn 0.5s ease forwards; /* Fade-in effect on load */
-    transition: transform 0.3s ease; /* Smooth transition for scaling */
-  }
-  
-  .quote-image:hover {
-    transform: scale(1.05); /* Scale up the image on hover */
-  }
-  
+
   .quote-text {
-    flex: 2; /* Allow more space for text */
-    padding: 20px; /* Add padding around text */
+    text-align: center;
   }
-  
-  blockquote {
-    font-style: italic; /* Style for blockquote */
-    margin: 0; /* Remove default margin */
-  }
-  
-  p {
-    text-align: right; /* Align author name to the right */
-    font-weight: bold; /* Make author name bold */
-  }
-  
-  /* Fade-in keyframes for images */
-  @keyframes fadeIn {
-    from {
-      opacity: 0; /* Start fully transparent */
-      transform: translateY(20px); /* Optional: slide in from below */
-    }
-    to {
-      opacity: 1; /* End fully opaque */
-      transform: translateY(0); /* Return to original position */
-    }
-  }
-  
-  /* Responsive adjustments */
-  @media (max-width: 768px) {
-    .cantainer1,
-    .container2 {
-      flex-direction: column; /* Stack elements on smaller screens */
-      align-items: flex-start; /* Align items to start */
-    }
-  
-    .quote-image-wrapper, 
-    .quote-text {
-      width: 100%; /* Full width for both elements in mobile view */
-      margin-bottom: 20px; /* Space between stacked elements */
-    }
-  
-    h2 {
-      font-size: 1.5em; /* Adjust heading size for smaller screens */
-      margin-bottom: 20px;
-    }
-  }
+}

@@ -118,7 +118,7 @@ const Youtube = () => {
 
   return (
     <div className="utube-container">
-      <h5>Mock interview</h5>
+      <h5>Mock Interview</h5>
       <div className="all-class">
         {mockData.map((item, index) => (
           <div className="thumbnail" key={index}>

@@ -1,64 +1,59 @@
 import React from "react";
-import "./Crouses.css"; // Correct path to the CSS file
-import bookImage from "../../assets/book3.jpeg"; // Correct path to the image file
+import "./Crouses.css"; // Ensure the filename is correct
+import one from "../../assets/onlinecls.jpg";
+import two from "../../assets/offlinecls.jpg";
+import three from "../../assets/mains.jpg";
+import four from "../../assets/prelims.jpg"; // Correct the path if needed
 
-const Crouses = () => {
-  const courses = [
-    {
-      title: "Online Courses",
-      description: "Join our online courses and study from the comforts of your home.",
-      imgSrc: bookImage,
-      btn1: "Course Details",
-      btn2: "Call Us",
-      phoneNumber: "+919776462222",
-      bgColor: "#1abc9c",
-    },
-    {
-      title: "Offline Courses",
-      description: "Join our offline courses and study in a classroom environment.",
-      imgSrc: bookImage,
-      btn1: "Course Details",
-      btn2: "Call Us",
-      phoneNumber: "+919776462222",
-      bgColor: "#e67e22",
-    },
-    {
-      title: "Prelims Test Series",
-      description: "Join our prelims test series and build your confidence for the exam.",
-      imgSrc: bookImage,
-      btn1: "Course Details",
-      btn2: "Call Us",
-      phoneNumber: "+919776462222",
-      bgColor: "#3498db",
-    },
-    {
-      title: "Mains Test Series",
-      description: "Join our mains test series and discussion classes with professors.",
-      imgSrc: bookImage,
-      btn1: "Course Details",
-      btn2: "Call Us",
-      phoneNumber: "+919776462222",
-      bgColor: "#e74c3c",
-    },
-  ];
+const coursesData = [
+  {
+    id: 1,
+    title: "Online Courses",
+    description:
+      "Join our online course and study from the comforts of your homes.",
+    image: one, // Use the imported image variable
+    colorClass: "classroom",
+  },
+  {
+    id: 2,
+    title: "Offline Courses",
+    description:
+      "Join our offline classroom batch and boost of your preparation.",
+    image: two, // Use the imported image variable
+    colorClass: "postal",
+  },
+  {
+    id: 3,
+    title: "Prlimes test series",
+    description:
+      "join our prlims test series and build your confidence for the exam.",
+    image: three, // Use the imported image variable
+    colorClass: "online",
+  },
+  {
+    id: 4,
+    title: "Mains Test Series",
+    description:
+      "join our mains test series and disussion class with prefessors.",
+    image: four, // Use the imported image variable
+    colorClass: "test-series",
+  },
+];
 
+const Courses = () => {
   return (
     <div className="courses-container">
-      {courses.map((course, index) => (
-        <div
-          key={index}
-          className="course-card"
-          style={{ backgroundColor: course.bgColor }}
-        >
+      {coursesData.map((course) => (
+        <div key={course.id} className={`course-card ${course.colorClass}`}>
           <h3>{course.title}</h3>
           <div className="course-image">
-            <img src={course.imgSrc} alt={course.title} />
+            <img src={course.image} alt={course.title} />
           </div>
           <p>{course.description}</p>
-          <div className="buttons">
-            <button className="btn">{course.btn1}</button>
-            <a href={`tel:${course.phoneNumber}`} className="btn">
-              <span className="call-icon">📞</span> {course.btn2}
+          <div className="course-buttons">
+            <button>Course Details</button>
+            <a href="tel:+919776462222">
+              <button>☎call us</button>
             </a>
           </div>
         </div>
@@ -67,4 +62,4 @@ const Crouses = () => {
   );
 };
 
-export default Crouses;
+export default Courses;

@@ -367,32 +367,32 @@ import itm15 from "../../assets/RACHITA_MOHAPATRA.png";
 
 const Photos = () => {
   const photoData = [
-    { src: itm1, name: "Debabrata", rank: "OAS Rank-9, OPSC-2022" },
-    { src: itm2, name: "Abhishek Swain", rank: "OAS Rank-113, OPSC-2022" },
-    { src: itm3, name: "Bhagyashree Mishra", rank: "OAS Rank-138, OPSC-2022" },
-    { src: itm4, name: "Bikash Ranjan Sahu", rank: "OAS Rank-15, OPSC-2022" },
-    { src: itm5, name: "Clinton Sahu", rank: "OAS Rank-35, OPSC-2022" },
-    { src: itm6, name: "Deeptiranjan Mishra", rank: "OAS Rank-146, OPSC-2022" },
-    { src: itm7, name: "Epsita Priyadarshini", rank: "OAS Rank-67, OPSC-2022" },
-    { src: itm8, name: "Kalinga Asish Satpathy", rank: "OAS Rank-88, OPSC-2022" },
-    { src: itm9, name: "Kapil Kumar Mohanty", rank: "OAS Rank-9, OPSC-2022" },
-    { src: itm10, name: "Kirti Sai Shukla", rank: "OAS Rank-89, OPSC-2022" },
-    { src: itm11, name: "Manas Ranjan Panda", rank: "OAS Rank-75, OPSC-2022" },
-    { src: itm12, name: "Suchismita Mahauty", rank: "OAS Rank-103, OPSC-2022" },
-    { src: itm13, name: "Pramod Kumar", rank: "OAS Rank-45, OPSC-2022" },
-    { src: itm14, name: "Pritam Mohanty Mohanta", rank: "OAS Rank-144, OPSC-2022" },
-    { src: itm15, name: "Rachita Mohapatra", rank: "OAS Rank-68, OPSC-2022" },
+    { src: itm1, name: "Debabrata", rank: "OAS Rank-9" },
+    { src: itm2, name: "Abhishek Swain", rank: "OAS Rank-113" },
+    { src: itm3, name: "Bhagyashree Mishra", rank: "OAS Rank-138" },
+    { src: itm4, name: "Bikash Ranjan Sahu", rank: "OAS Rank-15" },
+    { src: itm5, name: "Clinton Sahu", rank: "OAS Rank-35" },
+    { src: itm6, name: "Deeptiranjan Mishra", rank: "OAS Rank-146" },
+    { src: itm7, name: "Epsita Priyadarshini", rank: "OAS Rank-67" },
+    { src: itm8, name: "Kalinga Asish Satpathy", rank: "OAS Rank-88" },
+    { src: itm9, name: "Kapil Kumar Mohanty", rank: "OAS Rank-9" },
+    { src: itm10, name: "Kirti Sai Shukla", rank: "OAS Rank-89" },
+    { src: itm11, name: "Manas Ranjan Panda", rank: "OAS Rank-75" },
+    { src: itm12, name: "Suchismita Mahauty", rank: "OAS Rank-103" },
+    { src: itm13, name: "Pramod Kumar", rank: "OAS Rank-45" },
+    { src: itm14, name: "Pritam Mohanty Mohanta", rank: "OAS Rank-144" },
+    { src: itm15, name: "Rachita Mohapatra", rank: "OAS Rank-68" },
   ];
 
   return (
     <div className="photo-slider-container">
       <div className="photo-slider-track">
-        {/* Duplicate the array to ensure infinite scrolling */}
         {photoData.concat(photoData).map((photo, index) => (
           <div key={index} className="photo-slider-item">
             <img src={photo.src} alt={photo.name} />
             <h5>{photo.name}</h5>
-            <h6>{photo.rank}</h6>
+            <h6 className="rank">{photo.rank}</h6>
+            <h6 className="exam">OPSC-2022</h6>
           </div>
         ))}
       </div>
@@ -401,7 +401,6 @@ const Photos = () => {
 };
 
 export default Photos;
-
 
 
 

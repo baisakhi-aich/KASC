@@ -1,62 +1,98 @@
 .courses-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
-    padding: 20px;
-  }
-  
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px;
+  /* background-color: #f9f9f9; */
+}
+
+.course-card {
+  width: 250px;
+  padding: 20px;
+  border-radius: 8px;
+  text-align: center;
+  /* background-color: white; */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.course-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.course-card h3 {
+  margin: 15px 0 10px;
+  color: hwb(0 100% 0% / 0.829);
+  font-size: 18px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.course-card p {
+  color: #fff;
+  font-size: 16px;
+  line-height: 20px;
+  /* margin-top: 10px; Ensures consistent starting position for all p tags */
+  text-align: left; /* Aligns all text to the left */
+}
+
+.course-buttons {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  margin-top: 15px;
+}
+
+.course-buttons button {
+  padding: 8px 10px;
+  border: none;
+  border-radius: 4px;
+  background-color: hwb(0 100% 0% / 0.829);
+  color: #090909;
+  font-size: 12px;
+  cursor: pointer;
+  width: 100px;
+}
+
+.course-buttons button:hover {
+  background-color: #dab10f;
+}
+
+.course-image img {
+  width: 100px; /* Ensure circular shape remains responsive */ 
+  height: 100px;
+  border-radius: 50%; /* Makes the image circular */
+  object-fit: cover; /* Ensures the image fits well within the circle */
+  margin: 0 auto; /* Centers the image */
+}
+
+.classroom {
+  background-color: hsl(175, 91%, 33%);
+}
+
+.postal {
+  background-color: hsl(17, 72%, 37%);
+}
+
+.online {
+  background-color: hwb(115 1% 74% / 0.749);
+}
+
+.test-series {
+  background-color: rgba(161, 52, 139, 0.353);
+}
+
+@media (max-width: 768px) {
   .course-card {
-    width: 250px;
-    text-align: center;
-    border-radius: 10px;
-    padding: 20px;
-    color: white;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    transition: transform 0.3s;
+    width: 90%;
   }
-  
-  .course-card:hover {
-    transform: scale(1.05);
+}
+
+@media (min-width: 769px) and (max-width: 1200px) {
+  .course-card {
+    width: 45%;
   }
-  
-  .course-image img {
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
-    margin-bottom:15px;
-    margin-left: 50px;
-    background-color: white;
-  }
-  
-  h3 {
-    font-size: 18px;
-    margin: 10px 0;
-  }
-  
-  p {
-    font-size: 13px;
-    margin: 5px 0 5px1w;
-  }
-  
-  .buttons {
-    display: flex;
-    justify-content: center;
-    gap: 10px;
-  }
-  
-  .btn {
-    padding: 8px 12px;
-    border: none;
-    border-radius: 5px;
-    background-color: hsl(0, 19%, 95%);
-    color: #0f0d0d;
-    font-size: 12px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-  }
-  
-  .btn:hover {
-    background-color: rgba(255, 255, 255, 0.8);
-  }
-  
+}

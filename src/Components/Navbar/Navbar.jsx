@@ -75,9 +75,14 @@ import kasclogo from "../../assets/LOGO.png";
 
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
+  const [subMenuOpen, setSubMenuOpen] = useState(false);
 
   const toggleMenu = () => {
     setMenuOpen(!menuOpen);
+  };
+
+  const toggleSubMenu = () => {
+    setSubMenuOpen(!subMenuOpen);
   };
 
   return (
@@ -87,10 +92,12 @@ const Navbar = () => {
         <div className="container">
           <div className="contact-info">
             <span>
-              <i className="bi bi-envelope"></i><a href="kacs.workspace@gmail.com">kacs.workspace@gmail.com</a>
+              <i className="bi bi-envelope"></i>
+              <a href="mailto:kacs.workspace@gmail.com">kacs.workspace@gmail.com</a>
             </span>
             <span>
-              <i className="bi bi-telephone-fill"></i> <a href="+919776462222">+919776462222</a>
+              <i className="bi bi-telephone-fill"></i>
+              <a href="tel:+919776462222">+919776462222</a>
             </span>
           </div>
         </div>
@@ -149,9 +156,28 @@ const Navbar = () => {
               </Link>
               <ul className="dropdown-menu">
                 <li>
-                  <a className="dropdown-item" href="#">
-                    <i className="bi bi-book"></i> OAS Foundation Batch
+                  <a className="dropdown-item" onClick={toggleSubMenu}>
+                    <i className="bi bi-book"></i> OAS Foundation Batch{" "}
+                    <i
+                      className={`bi ${
+                        subMenuOpen ? "bi-caret-up-fill" : "bi-caret-down-fill"
+                      }`}
+                    ></i>
                   </a>
+                  {subMenuOpen && (
+                    <ul className="sub-dropdown-menu">
+                      <li>
+                        <a className="dropdown-item" href="#">
+                          <i className="bi bi-laptop"></i> Online Class
+                        </a>
+                      </li>
+                      <li>
+                        <a className="dropdown-item" href="#">
+                          <i className="bi bi-building"></i> Offline Class
+                        </a>
+                      </li>
+                    </ul>
+                  )}
                 </li>
                 <li>
                   <a className="dropdown-item" href="#">

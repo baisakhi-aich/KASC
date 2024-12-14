@@ -9,6 +9,7 @@ import Crouses from './Components/Crouses/Crouses';
 import Photos from './Components/Photos/Photos';
 import Youtube from './Components/Youtube/Youtube';
 import OurTeams from './Components/OurTeams/OurTeams';
+import Sidebar from './Components/Sidebar/Sidebar';
 const App = () => {
   return (
     <div>
@@ -22,6 +23,7 @@ const App = () => {
      <OurTeams/>
     <Address/>
     <Footer/>
+    <Sidebar/>
     </div>
   )
 }
