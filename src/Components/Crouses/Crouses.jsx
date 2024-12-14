@@ -24,7 +24,7 @@ const coursesData = [
   },
   {
     id: 3,
-    title: "Prlimes test series",
+    title: "Prelims Test series",
     description:
       "join our prlims test series and build your confidence for the exam.",
     image: three, // Use the imported image variable
@@ -53,7 +53,7 @@ const Courses = () => {
           <div className="course-buttons">
             <button>Course Details</button>
             <a href="tel:+919776462222">
-              <button>☎call us</button>
+              <button>☎Call Us</button>
             </a>
           </div>
         </div>
