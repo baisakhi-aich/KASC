@@ -127,19 +127,33 @@ const Navbar = () => {
               </a>
               <ul className="dropdown-menu">
                 <li>
-                  <a className="dropdown-item" href="#">
+                  <a className="dropdown-item" href="/blogs">
                     <i className="bi bi-journal-text"></i> Blogs
                   </a>
                 </li>
                 <li>
-                  <a className="dropdown-item" href="#">
-                    <i className="bi bi-person"></i> Director's Message
-                  </a>
+                  <Link
+                    to="advisors"
+                    className="dropdown-item"
+                    spy={true}
+                    smooth={true}
+                    offset={-50}
+                    duration={500}
+                  >
+                    <i className="bi bi-people"></i> Chief Advisor's Message
+                  </Link>
                 </li>
                 <li>
-                  <a className="dropdown-item" href="#">
-                    <i className="bi bi-people"></i> Chief Advisor's Message
-                  </a>
+                  <Link
+                    to="advisors"
+                    className="dropdown-item"
+                    spy={true}
+                    smooth={true}
+                    offset={-50}
+                    duration={500}
+                  >
+                    <i className="bi bi-people"></i> Director's Message
+                  </Link>
                 </li>
               </ul>
             </div>

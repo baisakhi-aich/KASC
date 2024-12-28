@@ -5,11 +5,13 @@ import demoman2 from "../../assets/RANJAN_DAS.jpg";
 
 const OurTeams = () => {
   return (
-    <div className="quote-container">
+    <div className="quote-container" id='advisors'>
+      
       <h2>Director's & Chief Advisor's Message</h2>
 
       {/* Director's Message */}
       <div className="quote-item">
+
         <div className="quote-image-wrapper">
           <img
             src={demoman1}

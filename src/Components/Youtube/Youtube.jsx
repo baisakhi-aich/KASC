@@ -108,7 +108,7 @@ const Youtube = () => {
   const mockData = [
     { img: mock1, link: 'https://youtu.be/hDGL8gYjHAI' },
     { img: mock2, link: 'https://youtu.be/5LSEcm14x6w' },
-    { img: mock3, link: 'https://youtu.be/some-video-link' },
+    { img: mock3, link: 'https://youtu.be/23-NEMX6Xh4?si=NIRt5OeqQex1Sfa3' },
     { img: mock4, link: 'https://youtu.be/5LSEcm14x6w' },
     { img: mock5, link: 'https://youtu.be/oQ3rrvh1DzY' },
     { img: mock6, link: 'https://youtu.be/oQ3rrvh1DzY' },

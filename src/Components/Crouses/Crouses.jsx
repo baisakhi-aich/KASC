@@ -42,7 +42,7 @@ const coursesData = [
 
 const Courses = () => {
   return (
-    <div className="courses-container">
+    <div className="courses-container" id="courses">
       {coursesData.map((course) => (
         <div key={course.id} className={`course-card ${course.colorClass}`}>
           <h3>{course.title}</h3>

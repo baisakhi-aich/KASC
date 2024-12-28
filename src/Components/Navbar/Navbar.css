@@ -12,16 +12,36 @@ body {
 /* Top Header */
 .top-header {
   background-color: #000;
-  color: #e6e3db;
+  color: #f1f1f1;
   font-size: 14px;
   padding: 5px 0;
 }
+  .top-header .contact-info {
+    display: flex; /* Makes the spans align horizontally */
+    gap: 20px; /* Adds space between the spans */
+  }
+  
+  .top-header .contact-info a {
+    text-decoration: none; /* Removes underline */
+    color: hsl(43, 91%, 45%); /* Changes text color to yellow */
+  }
+  
+  .top-header .contact-info a:hover {
+    color: hsl(261, 80%, 42%); /* Optional: Changes color on hover */
+  }
+  
+  .top-header .contact-info i {
+    margin-right: 5px; /* Adds spacing between the icon and text */
+    color: #d8d8ca; /* Matches icon color with text */
+  }
+  
 
 .top-header .container {
   display: flex;
   justify-content: flex-start;
   gap: 20px;
   padding: 0 20px;
+  text-decoration: none;
 }
 
 /* Navbar */
@@ -42,13 +62,13 @@ body {
 }
 
 .navbar .logo {
-  height: 45px; /* Adjusted logo height */
+  height: 45px;
   width: auto;
 }
 
 /* Hamburger Menu */
 .hamburger {
-  display: none; /* Hidden on desktop */
+  display: none;
   flex-direction: column;
   gap: 5px;
   cursor: pointer;
@@ -69,7 +89,7 @@ body {
 }
 
 .nav-right.active {
-  display: flex; /* Mobile menu */
+  display: flex;
   flex-direction: column;
   position: absolute;
   top: 100%;
@@ -129,13 +149,14 @@ body {
 }
 
 .dropdown .nav-link i {
-  margin-left: 5px; /* Space between text and icon */
+  margin-left: 5px;
 }
+
 .sub-dropdown-menu {
   list-style: none;
   padding: 0;
   margin: 0;
-  margin-left: 20px; /* Indent for nested menu */
+  margin-left: 20px;
 }
 
 .sub-dropdown-menu .dropdown-item {
@@ -153,11 +174,11 @@ body {
 /* Responsive Navbar */
 @media (max-width: 768px) {
   .hamburger {
-    display: flex; /* Show hamburger on mobile */
+    display: flex;
   }
 
   .nav-right {
-    display: none; /* Hide menu by default */
+    display: none;
   }
 
   .nav-right.active {
@@ -167,7 +188,7 @@ body {
   }
 
   .nav-right .nav-link {
-    font-size: 18px; /* Larger font size for mobile */
+    font-size: 18px;
     padding: 12px 20px;
     border-bottom: 1px solid #eee;
   }
@@ -175,11 +196,6 @@ body {
   .dropdown .dropdown-menu {
     position: static;
     width: 100%;
-    display: none; /* Hide dropdown on mobile */
-  }
-
-  .dropdown:hover .dropdown-menu {
-    display: block;
   }
 
   .navbar .login-btn {
@@ -201,3 +217,4 @@ body {
 .navbar .login-btn:hover {
   background-color: #ff9800;
 }
+
